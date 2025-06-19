@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<div style="margin:auto;width: 500px;color:#0B081D; border-radius:12px;background-color: white;border: 1px solid #0B081D;font-family: Arial, sans-serif;">
+    <!-- Header -->
+    <div style="background: #0B081D;border-top-left-radius:12px;border-top-right-radius:12px;padding:10px;">
+        <div style="margin: auto;text-align: center;">
+            <img style="height: 100px;" src="https://mahaaboassi.github.io/images/arizGlobal.png" alt="ariz-logo" />
+        </div>
+    </div>
+
+    <!-- Body Content -->
+    <div style="padding: 20px;">
+        <h1 style="text-align: center; color: #C3996B; margin-bottom: 0;">Welcome to Ariz Global</h1>
+        <h4 style="text-align: center; color: #0B081D; margin-top: 5px;">Digital Marketing Agency</h4>
+
+        <p>Dear Admin,</p>
+        <p>Someone has contacted us through the website. You can find their details below:</p>
+
+        <!-- Stylish Table -->
+        <table style="width: 100%; border-collapse: collapse; margin-top: 15px; color: #0B081D;">
+            <tr style="background-color: #F6F6F6;">
+                <td style="padding: 10px; font-weight: bold; border: 1px solid #DDD;">Name</td>
+                <td style="padding: 10px; border: 1px solid #DDD;">${data.name}</td>
+            </tr>
+            <tr>
+                <td style="padding: 10px; font-weight: bold; border: 1px solid #DDD;">Email</td>
+                <td style="padding: 10px; border: 1px solid #DDD;">${data.email}</td>
+            </tr>
+            <tr style="background-color: #F6F6F6;">
+                <td style="padding: 10px; font-weight: bold; border: 1px solid #DDD;">Phone</td>
+                <td style="padding: 10px; border: 1px solid #DDD;">${data.phone}</td>
+            </tr>
+            <tr>
+                <td style="padding: 10px; font-weight: bold; border: 1px solid #DDD;">Message</td>
+                <td style="padding: 10px; border: 1px solid #DDD;">${data.message}</td>
+            </tr>
+        </table>
+
+        <div style="margin-top: 20px;">
+            <p style="margin: 0;">Best regards,</p>
+            <p style="margin: 0;">Ariz Global Team</p>
+        </div>
+    </div>
+
+    <!-- Button -->
+    <div style="text-align: center; padding-bottom: 20px;">
+        <a href="https://arizglobal.com/" target="_blank">
+            <button style="background-color: #C3996B; cursor: pointer; color: white; border: none; padding: 10px 20px; border-radius: 12px;">Go to Ariz Global</button>
+        </a>
+    </div>
+</div>
+</body>
+</html>
