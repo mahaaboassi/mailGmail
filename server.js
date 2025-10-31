@@ -246,4 +246,4 @@ app.post("/api/mail/trn", async (req, res) => {
         status :500 });
   }
 }); 
-app.listen(6200, () => console.log("Server running on the port 6200"));
+app.listen(6200, () => console.log("Server running on port 6200"));
