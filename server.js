@@ -44,19 +44,17 @@ const sendEmail = async (email,subject,body) => {
         };
     }
   };
-const sendEmailForOutLook = async (email,subject,body) => {
+const sendEmailTRN = async (email,subject,body) => {
     try {
       // Set up the email transporter
       const transporter = nodemailer.createTransport({
-        host: "smtp.office365.com", // Or your preferred email service
-        port: 587,
-        secure: false,
+        service: "gmail", // Or your preferred email service
         auth: {
-          user:process.env.EMAIL_TRN, // Replace with your email
-          pass: process.env.APP_PASSWORD_TRN, // Replace with your email password or app password
+          user:process.env.EMAIL_GMAIL_TRN, // Replace with your email
+          pass: process.env.APP_PASSWORD_GMAIL_TRN, // Replace with your email password or app password
         },
           tls: {
-                ciphers: "SSLv3",
+                rejectUnauthorized: false, // ⛔ Not secure for production
             },
       });
    // Admin Email
@@ -165,7 +163,7 @@ app.post("/api/mail", async (req, res) => {
         status :500 });
   }
 });
-app.post("/api/mail/outlook", async (req, res) => {
+app.post("/api/mail/trn", async (req, res) => {
   try {
     const { body ,userEmail, subject , adminEmail } = req.body;
 
@@ -218,7 +216,7 @@ app.post("/api/mail/outlook", async (req, res) => {
                 status: 422,
             }); 
         }
-        const result = await sendEmailForOutLook(adminEmail,subject,body);
+        const result = await sendEmailTRN(adminEmail,subject,body);
         console.log(result);
         
         if (!result.success) {
